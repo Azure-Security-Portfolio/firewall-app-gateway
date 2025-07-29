@@ -6,12 +6,12 @@ Implementation of enterprise-grade perimeter defense and web application protect
 
 ## Table of Contents
 
-- [Overview]
-- [Real-World Risk]
-- [What I Built]
-- [Diagram]
-- [Objectives]
-- [Steps Performed]
+- [Overview](#overview)
+- [Real-World Risk](#real-world-risk)
+- [What I Built](#what-i-built)
+- [Diagram](#diagram)
+- [Objectives](#objectives)
+- [Steps Performed](#steps-performed)
   - [1. Resource Group and Virtual Network Setup]
   - [2. Azure Firewall Deployment]
   - [3. Application Gateway (WAF) Deployment]
@@ -20,9 +20,9 @@ Implementation of enterprise-grade perimeter defense and web application protect
   - [6. WAF Policies and Testing]
   - [7. Security Controls Validation]
   - [8. Cleanup]
-- [Screenshots]
-- [Lessons Learned]
-- [References]
+- [Screenshots](#screenshots)
+- [Lessons Learned](#lessons-learned)
+- [References](#references)
 
 --- 
 
