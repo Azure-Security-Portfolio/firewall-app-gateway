@@ -74,25 +74,25 @@ This lab demonstrates how to deploy layered, enterprise-class security for Azure
 ## Steps Performed
 
 **1. Resource Group and Virtual Network Setup**
-   - Created resource group Lab05-NetworkSec-RG for lab isolation *(Screenshot: vnet_and_subnets.png)*
+   - Created resource group Lab05-NetworkSec-RG for lab isolation *(Screenshot: `vnet_and_subnets.png`)*
    - Deployed VNET Lab05-VNET with subnets: AzureFirewallSubnet, AppGatewaySubnet, BackendSubnet and AzureFirewallManagementSubnet (if required)
 
 **2. Azure Firewall Deployment**
-   - Deployed Lab05-AzureFirewall with dedicated public IP *(Screenshot: azure_firewall_deployed.png)*
+   - Deployed Lab05-AzureFirewall with dedicated public IP *(Screenshot: `azure_firewall_deployed.png`)*
    - Created and assigned Firewall Policy Lab05-Firewall-Policy.
    - Added required management subnet.
 
 **3. Application Gateway (WAF) Deployment**
-   - Deployed Lab05-AppGateway with public IP, WAF V2 SKU and WAF Policy in Prevention mode *(Screenshot: app_gateway_review.png & app_gateway_overview.png)*
+   - Deployed Lab05-AppGateway with public IP, WAF V2 SKU and WAF Policy in Prevention mode *(Screenshot: `app_gateway_review.png` & `app_gateway_overview.png`)*
    - Configured backend pool (initially empty; VM added later)
 
 **4. Backend VM Setup**
    - Deployed Lab05-BackendVM in BackendSubnet (Ubuntu VM)
-   - Connected using Azure Bastion; installed and started NGINX web server *(Screenshot: backend_vm_created.png & backend_vm_running.png)*
+   - Connected using Azure Bastion; installed and started NGINX web server *(Screenshot: `backend_vm_created.png` & `backend_vm_running.png`)*
 
 **5. Routing & Firewall Rules**
    - Created Route Table and associated with BackendSubnet to force all outbound traffic through Azure Firewall.
-   - Configured Network Rule Collections (e.g., Allow-AppGW-HTTP, Allow-SSH-Admin, Deny-Backend-Internet) *(Screenshot: firewall_rules.png)*
+   - Configured Network Rule Collections (e.g., Allow-AppGW-HTTP, Allow-SSH-Admin, Deny-Backend-Internet) *(Screenshot: `firewall_rules.png`)*
    - Configured Application Rule Collections for FQDN filtering.
 
 **6. WAF Policies and Testing**
@@ -102,10 +102,10 @@ This lab demonstrates how to deploy layered, enterprise-class security for Azure
 
 **7. Security Controls Validation**
    - Verified Application Gateway and WAF operation:
-     - Backend health: Confirmed as “Healthy” *(Screenshot: backend_health.png)*
-     - End-to-end test: Accessed App Gateway public IP and saw NGINX welcome page *(Screenshot: nginx_via_appgw.png)*
+     - Backend health: Confirmed as “Healthy” *(Screenshot: `backend_health.png`)*
+     - End-to-end test: Accessed App Gateway public IP and saw NGINX welcome page *(Screenshot: `nginx_via_appgw.png`)*
    - Tested Deny-Backend-Internet rule:
-     - Outbound curl/ping/apt update from backend VM to external addresses blocked *(Screenshots: backend_curl_http_blocked.png, backend_curl_https_blocked.png, backend_ping_ip_blocked.png & backend_apt_update_blocked.png)*
+     - Outbound curl/ping/apt update from backend VM to external addresses blocked *(Screenshots: `backend_curl_http_blocked.png`, `backend_curl_https_blocked.png`, `backend_ping_ip_blocked.png` & `backend_apt_update_blocked.png`)*
    - Checked Firewall and WAF logs for evidence of blocked events.
 
 **8. Cleanup**
@@ -115,7 +115,7 @@ This lab demonstrates how to deploy layered, enterprise-class security for Azure
 
 ## Screenshots
 
-*All screenshots are included in the screenshots/ folder.*
+*All screenshots are included in the `screenshots/` folder.*
 
 | Step | Filename                          | Description                                     |
 | ---- | --------------------------------- | ----------------------------------------------- |
